@@ -1,105 +1,139 @@
+@import url("../fonts/Regular/SweetSansPro-Regular.ttf");
+
 * {
     padding: 0;
     margin: 0;
 
 }
+.active-link {
+    background: #1b9bff;
+    transition: .5s;
+    border-radius: 5px;
+}
+
 a {
     text-decoration: none;
     transition-duration: 10s;
     transition-delay: 2s;
     transition: 2s;
 }
+body {
+    position: relative;
+}
+#check{
+    display: none;
+  }
 
 .container {
-    
-    width:100%;
-    background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5) ),url(../assets/images/images/hero-bg.jpg);
+
+    width: 100%;
+    background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)), url(../assets/images/images/hero-bg.jpg);
     height: 50rem;
     position: relative;
     background-size: cover;
     background-position: center;
-    background-attachment:fixed;
-  }
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    background-attachment: fixed;
+}
+nav{
     position: fixed;
+    z-index: 2;
+    height: 87px;
+    width: 100%;
     justify-content: space-between;
-    z-index: 1;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 5px 0;
+    display: flex;
   }
-  nav ul {
-    flex: 1;
-    text-align: right;
-    padding-right: 30px;
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
   }
-  nav ul li {
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
     display: inline-block;
-    list-style: none;
-    margin: 10px 30px;
+    line-height: 80px;
+    margin: 0 5px;
   }
-  nav ul li a {
-    color: rgb(206, 201, 201);
-    text-decoration: none;
-    position: relative;
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
   }
-  nav ul li a::after{
-    content: "";
-    width: 0;
-    height: 3px;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translate(-50%);
-    background: #fff;
-    transition: width 0.5s;
-  
+  nav ul li a.active {
+
+    background: #1b9bff;
+    transition: .5s;
   }
-  nav ul li a:hover::after{
-    width: 50%;
+  /* a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
+  } */
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    text-align: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
   }
-  #logo {
+
+
+
+#logo {
     height: 4rem;
     width: 4rem;
     border-radius: 40px;
     cursor: pointer;
-  }
-  .logo-wrapper {
+}
+
+.logo-wrapper {
     display: flex;
     padding-left: 30px;
     gap: 1rem;
     align-items: center;
     justify-content: center;
-  }
-  #company-name {
+}
+
+#company-name {
     color: orangered;
     cursor: pointer;
-  }
-  #vision {
+} 
+
+ #vision {
     width: 50rem;
     font-size: 55px;
     z-index: 2;
-    color:#fff;
+    color: #fff;
+    font-family: 'Acumin Pro Light';
     padding-left: 2rem;
 }
+
 .home-content {
     padding-top: 7rem;
     display: flex;
 }
+
 .booking-wrapper {
- padding-top: 5rem;
+    padding-top: 1rem;
 }
+
 #find-your-booking {
 
+    font-family: 'Sweet Sans Pro Regular';
     font-size: 25px;
     z-index: 1;
-    color:white;
+    color: white;
     padding-left: 2rem;
     text-transform: uppercase;
 }
+
 #are-you-tired {
     font-size: 20px;
     padding-top: 2rem;
@@ -108,31 +142,57 @@ a {
     background: transparent;
     padding-left: 2rem;
 }
+
 .book-now {
     margin-top: 1rem;
     border: 2px solid white;
     opacity: 1;
-    width:10rem;
+    width: 10rem;
     text-align: center;
-    padding: 2rem;
+    width: fit-content;
     margin-left: 2rem;
-    cursor: pointer;
-    background: linear-gradient(to left, transparent 50%, rgb(137, 137, 138) 50%) right;
-    background-size: 200%;
-    transition: .5s ease-out;
+
+   
 }
-.book-now a {
-    color:#fff;
+
+.book-now p {
+    color: #fff;
     font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    background: -webkit-linear-gradient(0deg, transparent 50%, rgb(137, 137, 138) 50%);
+    background-size: 800px 80px;
+    transition: .5s ease-out;
+   
+}
+.book-now p:hover {
+    background-position: 200px 0;
 
 }
+
+
 #right-arrow {
 
     padding-left: 1rem;
     font-size: 1.6rem;
 }
+
 .book-now:hover {
-    background-position: left;
+    background-position: left bottom;
+}
+
+.menu-icon div {
+
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 30px 6px 0;
+    cursor: pointer;
+}
+
+.menu-icon {
+    visibility: hidden;
+    cursor: pointer;
 }
 
 /* About */
@@ -140,23 +200,29 @@ a {
 #about {
 
     width: 100%;
-    height: 100vh;
+    height: 40rem;
     background-color: #fff
 }
+
 .about-description {
     font-size: 23px;
     padding-left: 2rem;
     padding-right: 2rem;
+    font-family: 'Acumin Pro Light';
 }
+
 .about-contents {
     padding-top: 10rem;
     /* padding-left: 2rem;
     padding-right: 2rem; */
 }
+
 .about-title {
     padding-bottom: 4rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    font-family: 'Sweet Sans Pro Regular';
+    text-transform: uppercase;
     font-size: 26px;
     color: gray;
 }
@@ -165,30 +231,39 @@ a {
 
     background-color: #151515;
 }
+
 .services {
-    
+
     padding-top: 10rem;
-    color:white;
+    color: white;
     width: 100%;
     height: 100vh;
     background-color: #151515;
 }
+
 .services-title {
-    
+
     font-size: 25px;
     padding-bottom: 4rem;
     padding-left: 2rem;
     padding-right: 2rem;
- 
+    font-family: 'Sweet Sans Pro Regular';
+    text-transform: uppercase;
+
 }
+
 #service-question {
-   text-align: center;
+    text-align: center;
+    font-family: 'Sweet Sans Pro Regular';
 }
+
 #partner-with-us {
     padding-top: 5rem;
     padding-left: 2rem;
     padding-right: 2rem;
+    font-family: 'Sweet Sans Pro Regular';
 }
+
 #register-with-us {
     border: 1px solid white;
     margin-top: 3rem;
@@ -197,57 +272,79 @@ a {
     width: fit-content;
     padding-right: 2rem;
     margin-left: 2rem;
+   
     background: linear-gradient(to left, transparent 50%, rgb(103, 104, 105) 50%) right;
     background-size: 200%;
+    cursor: pointer;
     transition: .5s ease-out;
+    font-family: 'Sweet Sans Pro Regular';
 }
-#register-with-us a {
 
-    color:white;
-}
-#register-with-us:hover{
+
+#register-with-us:hover {
 
     background-position: left;
 
 }
-#service-providers {
-    margin-left: 2rem;
-    padding-top: 2rem;
-    color:rgba(255, 255, 255, .5);;
+#displayRegister {
+    cursor: pointer;
+    padding: 0;
 }
+
+#service-providers {
+    margin: 0 5rem;
+    padding-top: 2rem;
+    font-size: 18px;
+    color: rgba(255, 255, 255, .5);
+    font-family: 'Acumin Pro Light';
+}
+
 /* Works */
 
 .works {
     width: 100%;
     height: 100%;
-    padding-top: 10rem;
+    padding-top: 5rem;
     background-color: #fff;
 }
+
 .works-title {
     padding: 0 2rem;
+    font-family: 'Sweet Sans Pro Regular';
+    font-size: 26px;
+    color: gray;
 }
+
 .fav-pictures {
     padding-left: 20rem;
     line-height: 2;
-    width: 35rem;
+    width: 39rem;
+    font-family: 'Acumin Pro Light';
+
 }
+
 .sample-works {
     width: 70%;
-    height: 60vh;
+    height: 65rem;
     align-items: center;
+    z-index: -1;
     justify-content: center;
     display: flex;
 }
+
 .swiper {
     width: 80%;
-    height: 80vh;
+    height: 60rem;
+    z-index: -1;
 }
+
 #stat {
-    
+
     background-color: #151515;
     height: 100rem;
-    width:100vh;
+    width: 100vh;
 }
+
 .stats {
     padding-top: 6.6rem;
     padding-bottom: 5.4rem;
@@ -260,6 +357,7 @@ a {
     overflow: hidden;
     position: relative
 }
+
 .stats::before {
     content: "";
     display: block;
@@ -271,81 +369,104 @@ a {
     height: 100%;
     opacity: .6
 }
+
 .stats-content-show {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 5rem;
 }
+
 .item-stats-count {
     color: #fff;
     font-size: 65px;
 }
+
 .item-stats-counts {
     color: #fff;
     font-size: 65px;
 }
+
 .item-stats {
     text-align: center;
 }
+
 .item-stats h5 {
 
-    text-transform:uppercase;
+    text-transform: uppercase;
+    font-family: 'Sweet Sans Pro Regular';
 }
+
 .works {
     width: 100%;
     height: 100vh;
     background-color: #fff
 }
+
 .show {
     position: relative;
     transform: translateY(150px);
     transition: all 1s ease;
     opacity: 0;
 }
+
 .show.active {
     transform: translateY(0px);
     opacity: 1;
 }
+
 .get-in-touch {
     background-color: rgb(32, 30, 30);
     width: 100%;
     height: 43rem;
     padding-top: 10rem;
 }
+
 #get-in-touch-title {
     color: #fff;
     padding-left: 2rem;
     padding-right: 2rem;
+    font-family: 'Sweet Sans Pro Regular';
+    font-size: 26px;
 }
+
 .drop-us {
-   
+
     padding-top: 2rem;
     color: #fff;
     font-size: 40px;
     font-weight: bold;
     padding-left: 5rem;
+    font-family: 'Acumin Pro Light';
 }
+
 #support {
     color: orangered;
+    font-family: 'Acumin Pro Light';
 }
+
 .location-contact {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     padding-top: 5rem;
     color: #fff;
     line-height: 4rem;
     font-size: 23px;
 }
+
 .where-we-are {
     color: rgb(145, 147, 150);
+    font-family: 'Sweet Sans Pro Regular';
 }
+
 #instagram {
     color: orangered;
+    font-family: 'Acumin Pro Light';
 }
 
 #contact-email {
     color: orangered;
+    font-family: 'Acumin Pro Light';
 }
 
 .let-us-talk {
@@ -354,32 +475,37 @@ a {
     margin-top: 5rem;
     margin-right: 5rem;
     display: flex;
-  
+
 }
 
 #subscribe {
 
     background-color: #fff;
     padding: 2rem 3rem 2rem 1rem;
-  
+
 }
+#place {
+    font-family: 'Acumin Pro Light';
+}
+
 #we-talk {
 
     background: linear-gradient(to left, #000 50%, rgb(103, 104, 105) 50% right) right;
     border: 2px solid #fff;
-    padding: 2rem 1rem 2rem 3rem; 
+    padding: 2rem 1rem 2rem 3rem;
     color: #fff;
-   
+
 }
 
 
 #we-talk:hover {
 
-    background: linear-gradient(to left, rgb(103, 104, 105) 50% , rgb(103, 104, 105) 50%) right;
+    background: linear-gradient(to left, rgb(103, 104, 105) 50%, rgb(103, 104, 105) 50%) right;
     transition: 5s ease-out;
     background-position: left;
-   
+
 }
+
 #empty {
     background-color: #000;
 }
@@ -388,6 +514,7 @@ a {
     background-color: rgb(32, 30, 30);
     height: 10rem;
 }
+
 .line {
     content: "";
     display: block;
@@ -395,74 +522,87 @@ a {
     width: 100%;
     background-color: rgb(42, 42, 44);
 }
+
 .back-to-top {
     float: right;
     padding-top: 12rem;
     margin-right: -13rem;
 }
+
 #link-up {
-    color:rgb(42, 42, 44);
+    color: rgb(42, 42, 44);
 }
+
 #back-to-home {
     padding-top: .5rem;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
 }
+
 .vertical-line {
-    width:1px;
+    width: 1px;
     height: 30px;
     padding-top: -20rem;
     margin-left: .48rem;
-    background-color:rgb(42, 42, 44);
+    background-color: rgb(42, 42, 44);
 }
+
 #link-up {
     text-transform: uppercase;
 }
-footer {
 
+footer {
+    
     padding-top: 2rem;
     padding-left: 5rem;
-    color: rgb(42, 42, 44); 
+    color: rgb(42, 42, 44);
 }
+
 #copyright {
 
     padding-bottom: 1rem;
     margin-top: 3rem;
-    color:rgb(176, 171, 171);
+    color: rgb(176, 171, 171);
+    font-family: 'Acumin Pro Light';
 }
+
 #arrow {
-    width:5rem;
-    height: 4rem;
-    padding-top: 2rem;
+    width: 5rem;
+    height: 2rem;
+    padding-top: 1rem;
     background-color: #000;
     text-align: center;
     float: right;
     margin-top: -3.2rem;
-    margin-right: 2.7rem ;
-    
+    margin-right: 2.7rem;
+
 }
+
 #arrow-up {
-    color:white;
-    top: 2rem;
-    height: 3rem;
+    color: white;
+    top: 1rem;
+    height: 1rem;
 }
+
 @media screen and (max-width: 480px) {
+
    
-    
+
     .container {
-    
-        width:100%;
-        background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5) ),url(/assets/images/images/hero-bg.jpg);
+
+        width: 100%;
+        background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)), url(/assets/images/images/hero-bg.jpg);
         height: 45rem;
         position: relative;
         background-size: cover;
         background-position: center;
-        background-attachment:fixed;
-      }
-      
+        background-attachment: fixed;
+    }
+
     .booking-wrapper {
         padding-top: -10rem;
-       }
+    }
+
     #vision {
         padding-top: 4rem;
         text-align: center;
@@ -483,11 +623,12 @@ footer {
         font-size: 18px;
         margin-top: 2rem;
         text-align: center;
+        font-family: 'Sweet Sans Pro';
         z-index: 1;
-        color:white;
+        color: white;
         padding: 1rem 0 0 2rem;
-        text-transform: uppercase;
     }
+
     #are-you-tired {
         font-size: 18px;
         text-align: center;
@@ -497,27 +638,37 @@ footer {
         background: transparent;
         padding-left: 2rem;
     }
+
     nav ul {
-       margin-top: 1rem;
+        display: none;
+        /* margin-top: 1rem;
         /* padding-right: 30px; */
-        display: flex;
+        /* display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 1rem;
-        
-      }
-      nav ul li {
+        margin-bottom: 1rem;  */
+
+    }
+
+    .menu-icon {
+        visibility: visible;
+        cursor: pointer;
+    }
+
+    nav ul li a{
+        display: none;
         display: flex;
         flex-direction: row;
         padding: -30px;
         margin: 1rem .3rem;
-      }
-      #vision {
+    }
+
+    #vision {
         width: 50rem;
         font-size: 23px;
         text-align: center;
         z-index: 2;
-        color:#fff;
+        color: #fff;
         padding-left: 2rem;
     }
 
@@ -528,62 +679,75 @@ footer {
         height: 45rem;
         background-color: #fff
     }
+
     .about-contents {
         text-align: center;
     }
+
     .about-title {
-        padding-bottom: 1rem;
-      
+        padding-bottom: -10rem;
+
     }
+
     .about-contents {
         padding-top: 2rem;
         /* padding-left: 2rem;
         padding-right: 2rem; */
     }
+
     .services {
         text-align: center;
     }
+
     /* Works */
 
     .works-title {
         text-align: center;
     }
+
     .fav-pictures {
 
         text-align: center;
         padding-left: 2rem;
-        width:15rem;
+        width: 15rem;
         font-size: 18px;
 
     }
+
     .works {
         width: 100%;
         height: 100vh;
         padding-top: 4rem;
         background-color: #fff;
     }
+
     .sample-works {
         padding-top: 5rem;
         width: 100%;
         height: 50vh;
         /* margin-left: 2rem; */
         align-items: center;
+        z-index: -1;
         justify-content: center;
         display: flex;
     }
+
     .swiper {
         width: 80%;
+        z-index: -1;
         height: 50vh;
     }
+
     #img {
         height: 15rem;
         width: 30rem;
     }
+
     /* Service */
     .services {
-    
-        padding-top: 3rem;
-        color:white;
+
+        padding-top: 2rem;
+        color: white;
         width: 100%;
         height: 100vh;
         background-color: #000;
@@ -595,20 +759,25 @@ footer {
         font-size: 18px;
         padding-right: 2rem;
     }
+
     #service-providers {
         margin-top: -1rem;
         text-align: center;
         margin-right: 1rem;
+        margin-left: 1rem;
     }
+
     #register-with-us {
         margin-top: 1rem;
-       font-size: 18px;
-       margin: 0 .5rem 0 .5rem ;
+        font-size: 15px;
+        margin: 0 .5rem 0 .5rem;
     }
+
     #service-question {
 
         font-size: 18px;
     }
+
     /* stats */
     .let-us-talk {
 
@@ -618,6 +787,7 @@ footer {
         width: fit-content;
 
     }
+
     .footer-close {
         visibility: hidden;
     }
@@ -628,23 +798,27 @@ footer {
         justify-content: space-between;
         padding: 0 5rem;
     }
+
     #get-in-touch-title {
         text-align: center;
     }
+
     .drop-us {
         text-align: center;
         padding: 2rem .5rem 0 .5rem;
         font-size: 14px;
     }
+
     .get-in-touch {
         background-color: rgb(32, 30, 30);
         width: 100%;
         height: 40rem;
         padding-top: 4rem;
     }
+
     .location-contact {
         display: flex;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
         flex-wrap: wrap;
         padding-top: 1rem;
         gap: 1rem;
@@ -652,33 +826,38 @@ footer {
         line-height: 4rem;
         font-size: 23px;
     }
+
     .location {
         text-align: center;
         line-height: 2rem;
         padding-bottom: 1.3rem;
     }
+
     .follow-us {
         text-align: center;
         padding-bottom: 1.3rem;
         line-height: 2rem;
     }
+
     .contact-us {
         text-align: center;
         padding-bottom: 1.3rem;
         line-height: 2rem;
     }
+
     footer {
 
         padding-top: 2rem;
         padding-left: .4rem;
-        width: 8rem;  
+        width: 8rem;
     }
+
     #arrow {
-      
+
         margin-top: -4.3rem;
         float: right;
         margin-right: 5px;
-        
+
     }
 
 
@@ -687,27 +866,31 @@ footer {
 @media screen and (min-width: 481px) {
 
     .container {
-    
-        width:100%;
-        background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5) ),url(/assets/images/images/hero-bg.jpg);
+
+        width: 100%;
+        background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)), url(/assets/images/images/hero-bg.jpg);
         height: 42rem;
         position: relative;
         background-size: cover;
         background-position: center;
-        background-attachment:fixed;
-      }
+        background-attachment: fixed;
+    }
+
     .booking-wrapper {
+        padding-top: 5rem;
+    }
+
+    #vision {
+        width: 50rem;
+        font-size: 23px;
+        text-align: center;
+        z-index: 2;
+        color: #fff;
+        padding-left: 2rem;
+    }
+    #book-a-place {
         padding-top: -10rem;
-       }
- 
-        #vision {
-            width: 50rem;
-            font-size: 23px;
-            text-align: center;
-            z-index: 2;
-            color:#fff;
-            padding-left: 2rem;
-        }
+    }
 
 
     #find-your-booking {
@@ -716,10 +899,10 @@ footer {
         margin-top: -2rem;
         text-align: center;
         z-index: 1;
-        color:white;
+        color: white;
         padding: 1rem 0 0 2rem;
-        text-transform: uppercase;
     }
+
     #are-you-tired {
         font-size: 18px;
         text-align: center;
@@ -729,48 +912,68 @@ footer {
         background: transparent;
         padding-left: 2rem;
     }
-    nav ul {
+    .services {
+
+        padding-top: 2rem;
+    }
+    #service-providers {
+        margin: 0 1rem;
+    }
+    #register-with-us {
         margin-top: 1rem;
-         /* padding-right: 30px; */
-         display: flex;
-         flex-direction: row;
-         margin-left: 2rem;
-         align-items: center;
-         justify-content: center;
-         padding-bottom: .7rem;
-         justify-content:space-evenly
-         
-       }
-       nav ul li {
-         display: flex;
-         flex-direction: row;
-         margin: 0 1.3rem;
-       }
-/* works */
-.fav-pictures {
-    padding-left: 1rem;
-    text-align: center;
-    width:25rem;
-    font-size: 25px;
-}
+        width: fit-content;
+        font-size: 15px;
+        margin: 2rem .5rem 0 1.5rem;
+    }
 
-.sample-works {
+    /* nav ul {
+        margin-top: 1rem;
+        /* padding-right: 30px; */
+        /* display: flex;
+        flex-direction: row;
+        margin-left: 2rem;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: .7rem;
+        justify-content: space-evenly
+    }
 
-    padding-top: 1rem;
-    width: 100%;
-    height: 60vh;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-.swiper {
-    width: 80%;
-    height: 70vh;
-}
-#img {
-    height: 40rem;
-    width: 40rem;
-}
+    nav ul li {
+        display: flex;
+        flex-direction: row;
+        margin: 0 1.3rem;
+    } */ 
+
+    /* works */
+    .fav-pictures {
+        padding-left: 1rem;
+        text-align: center;
+        width: 25rem;
+        font-size: 25px;
+    }
+
+    .sample-works {
+
+        padding-top: 1rem;
+        width: 100%;
+        height: 60vh;
+        z-index: -1;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .swiper {
+        width: 80%;
+        z-index: -1;
+        height: 70vh;
+    }
+
+    #img {
+        height: 40rem;
+        width: 40rem;
+    }
+
     /* stats */
 
     .drop-us {
@@ -778,13 +981,15 @@ footer {
         padding: 2rem .5rem 0 .5rem;
         font-size: 30px;
     }
+
     .stats-content-show {
         display: flex;
         flex-wrap: wrap;
-        gap:1rem;
+        gap: 1rem;
         justify-content: space-between;
         padding: 0 5rem;
     }
+
     .let-us-talk {
         margin-top: 0;
         text-align: center;
@@ -794,12 +999,12 @@ footer {
     }
 
     .back-to-top {
-       visibility: hidden;
+        visibility: hidden;
     }
-    
+
     .location-contact {
         display: flex;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
         flex-wrap: wrap;
         padding-top: 5rem;
         gap: 1rem;
@@ -807,43 +1012,57 @@ footer {
         line-height: 4rem;
         font-size: 23px;
     }
-    
+
+}
+
+@media screen and (max-width: 675px) {
+
+    #service-providers {
+        margin: 0 3rem;
+    }
+   
+
 }
 
 @media screen and (min-width: 768px) {
-
+   
     .container {
-    
-        width:100%;
-        background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5) ),url(/assets/images/images/hero-bg.jpg);
+
+        width: 100%;
+        background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)), url(/assets/images/images/hero-bg.jpg);
         height: 60rem;
         position: relative;
         background-size: cover;
         background-position: center;
-        background-attachment:fixed;
-      }
-      #vision {
+        background-attachment: fixed;
+    }
+
+    #vision {
         width: 50rem;
         font-size: 55px;
         z-index: 2;
-        color:#fff;
+        color: #fff;
         padding-left: 2rem;
     }
+
     .home-content {
         padding-top: 7rem;
         display: flex;
     }
+
     .booking-wrapper {
-     padding-top: 5rem;
+        padding-top: 5rem;
     }
+
     #find-your-booking {
-    
+
         font-size: 25px;
         z-index: 1;
-        color:white;
+        color: white;
         padding-left: 2rem;
-        text-transform: uppercase;
+
     }
+
     #are-you-tired {
         font-size: 20px;
         padding-top: 2rem;
@@ -852,10 +1071,12 @@ footer {
         background: transparent;
         padding-left: 2rem;
     }
+
     .book-now {
         margin-top: 7rem;
-        
+
     }
+
     /* works */
 
     .fav-pictures {
@@ -869,6 +1090,7 @@ footer {
 
     .sample-works {
         padding-top: 1rem;
+        z-index: -1;
         width: 80%;
         height: 60vh;
         align-items: center;
@@ -876,15 +1098,27 @@ footer {
         align-self: center;
         margin-left: 6rem;
         display: flex;
-    
+
     }
+
     .swiper {
         width: 60%;
+        z-index: -1;
         height: 70vh;
     }
+
     #img {
         height: 40rem;
         width: 60rem;
+    }
+
+    #register-with-us {
+        margin-top: 1rem;
+        font-size: 18px;
+        margin: 2rem .5rem 0 1.5rem;
+    }
+    #service-providers {
+        margin: 0 5rem;
     }
 
     /* stats */
@@ -894,13 +1128,15 @@ footer {
         padding: 2rem .5rem 0 .5rem;
         font-size: 30px;
     }
+
     .stats-content-show {
         display: flex;
         flex-wrap: wrap;
-        gap:1rem;
+        gap: 1rem;
         justify-content: space-between;
         padding: 0 5rem;
     }
+
     .let-us-talk {
         margin-top: 0;
         text-align: center;
@@ -910,12 +1146,12 @@ footer {
     }
 
     .back-to-top {
-       visibility: visible;
+        visibility: visible;
     }
-    
+
     .location-contact {
         display: flex;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
         flex-wrap: wrap;
         padding-top: 5rem;
         gap: 1rem;
@@ -923,5 +1159,46 @@ footer {
         line-height: 4rem;
         font-size: 23px;
     }
-    
+
 }
+
+@media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: fit-content;
+      background: #2c3e50;
+      z-index: 1;
+      top: 80px;
+      left: -120%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 20px 0;
+      line-height: 10px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }

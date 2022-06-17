@@ -6,51 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="parallax.js-1.5.0/parallax.min.js"></script>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/RegisterModal.css">
+    <link rel="stylesheet" href="CSS/Modal.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link href="fonts/Regular/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="//db.onlinewebfonts.com/c/304efff9f3963a0ded6c244c0c9a941e?family=Sweet+Sans+Pro " rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <title>Noir</title>
 </head>
 
 <body>
-    <div class="container" id="home">
-        <nav id="nav">
-            <div class="logo-wrapper">
+    <section class="container" id="home">
+        <div class="container" id="home">
+            <nav id="nav">
+              <input type="checkbox" id="check">
+              
+              <div class="logo-wrapper">
                 <img id="logo" src="assets/images/images/logo-bg.png"></img>
                 <p id="company-name">Noir_Blanc</p>
             </div>
-            <ul>
-                <li><a href="#home">Home</a> </li>
-                <li><a href="#about">About</a> </li>
-                <li><a href="#service">Services</a></li>
-                <li><a href="#work">Works</a> </li>
-                <li><a href="#stat-show">Contact</a> </li>
-            </ul>
-        </nav>
-
-        <div class="home-content show">
-            <h1 id="vision">
-                Our vision is to be the leading lifestyle digital platform </br>
-                and application of choice in the beauty, wellness, and fashion industry.
-            </h1>
-
-            <div class="home-content__video">
-                <a class="" href="https://www.youtube.com/watch?v=iWiilOH4cQE" data-lity>
-                    <span class="video-icon"></span>
-                    <span class="video-text">Play Video</span>
-                </a>
+              <ul id="getUl">
+                <li ><a class="home nav-link active-link"href="#home">Home</a></li>
+                <li ><a class="about nav-link" href="#about">About</a></li>
+                <li ><a class="service nav-link" href="#service">Services</a></li>
+                <li ><a class="work nav-link" href="#work">Feedback</a></li>
+                <li ><a class="contact-us nav-link" href="#contact-us">Contact</a></li>
+                
+              </ul>
+              <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+              </label>
+            </nav>
+        
+            <div class="home-content show">
+                <h1 id="vision">
+                    Our vision is to be the leading lifestyle digital platform </br>
+                    and application of choice in the beauty, wellness, and fashion industry.
+                </h1>
+        
+                <div class="home-content__video">
+                    <a class="" href="https://www.youtube.com/watch?v=iWiilOH4cQE" data-lity>
+                        <span class="video-icon"></span>
+                        <span class="video-text">Play Video</span>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="booking-wrapper show">
-            <p id="find-your-booking">FIND YOUR FAVOURITE STYLIST ANYTIME BOOK NOW</p>
-            <p id="are-you-tired">Are you tired of always not being able to find a stylist, makeup artist or barber.
-                Well, look no further</p>
-        </div>
-
-        <div class="book-now show">
-            <p><a href="html/Contact.html" target="_blank">Book Now <span id="right-arrow">&#x2192</span></a></p>
-        </div>
-    </div>
+            <div class="booking-wrapper show">
+                <p id="find-your-booking">FIND YOUR FAVOURITE STYLIST ANYTIME BOOK NOW</p>
+                <p id="are-you-tired">Are you tired of always not being able to find a stylist, makeup artist or barber.
+                    Well, look no further</p>
+            </div>
+        
+            <div class="book-now show" >
+                <p>Book Now <span id="right-arrow">&#x2192</span></p>
+            </div>
+           </div>
+        
+    </section>
 
     <section id="about">
 
@@ -81,7 +96,7 @@
             </h2>
 
             <h3 id="register-with-us">
-                <a href="html/Register.html" target="_blank"> REGISTER AS A SERVICE PROVIDER <span id="right-arrow">&#x2192</span></a>
+                <p id="displayRegister"> REGISTER AS A SERVICE PROVIDER <span id="right-arrow">&#x2192</span></p>
             </h3>
             <p id="service-providers">
                 A 24/7 beauty bookings platform that connects customers and service providers
@@ -91,18 +106,17 @@
         </div>
     </section>
 
-    <section class="works show" id="work">
+    <section class="works " id="work">
 
+        <p class="works-title show">03. RECENT WORKS</p>
 
-        <p class="works-title">03. RECENT WORKS</p>
-
-        <h1 class="fav-pictures">
+        <h1 class="fav-pictures show">
             Here are some of our favorite pictures. Feel free to check them out.
         </h1>
 
         <div class="sample-works">
 
-            <div class="swiper">
+            <div class="swiper ">
 
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img id="img" src="assets/images/garally/g-droplet.jpg"> </img></div>
@@ -121,7 +135,7 @@
         </div>
     </section>
 
-    <section id="stat show" >
+    <section id="contact-us" >
         <div class="stats" id="stat-show" >
             <div class="stats-content">
 
@@ -165,7 +179,7 @@
 
                     <div class="location">
                         <p class="where-we-are">WHERE TO FIND US</p>
-                        <p>Lusaka, Zambia</p>
+                        <p id="place">Lusaka, Zambia</p>
                     </div>
 
                     <div class="follow-us">
@@ -217,6 +231,34 @@
 
     </section>
 
+    <div class="modal-wrapper">
+        <div class="Register-box">
+            <h2>Register As A service Provider</h2>
+            <form>
+              <div class="Register-box-user">
+                <input type="text" name="" required="">
+                <label>Full Name</label>
+              </div>
+    
+              <div class="Register-box-user">
+                <input type="email" name="" required="">
+                <label>Email </label>
+              </div>
+    
+              <div class="Register-box-user">
+                <input type="text" name="" required="">
+                <label>Location </label>
+              </div>
+    
+              <a class="registerBtn" href="#">
+                Register
+              </a>
+              <p id="close">Close</p>
+            </form>
+          </div>
+    </div>
+
+   
 
     <script src="JavaScript/service.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
@@ -237,6 +279,10 @@
                 prevEl: '.swiper-button-prev',
             },
 
+        });
+        $("a").click(function(){
+            $("a").css("background-color", "");
+            $(this).css("background-color","#1b9bff")
         });
     </script>
 </body>
