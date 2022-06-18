@@ -111,8 +111,9 @@ nav{
     font-size: 55px;
     z-index: 2;
     color: #fff;
-    font-family: 'Acumin Pro Light';
     padding-left: 2rem;
+    font-family: 'Acumin Pro Light';
+
 }
 
 .home-content {
@@ -141,6 +142,8 @@ nav{
     opacity: 1;
     background: transparent;
     padding-left: 2rem;
+    font-family: 'Acumin Pro Light';
+
 }
 
 .book-now {
@@ -163,6 +166,8 @@ nav{
     background: -webkit-linear-gradient(0deg, transparent 50%, rgb(137, 137, 138) 50%);
     background-size: 800px 80px;
     transition: .5s ease-out;
+    font-family: 'Acumin Pro Light';
+
    
 }
 .book-now p:hover {
@@ -482,6 +487,8 @@ nav{
 
     background-color: #fff;
     padding: 2rem 3rem 2rem 1rem;
+    font-family: 'Acumin Pro Light';
+    color: #d8dbde;
 
 }
 #place {
@@ -494,6 +501,7 @@ nav{
     border: 2px solid #fff;
     padding: 2rem 1rem 2rem 3rem;
     color: #fff;
+    font-family: 'Acumin Pro Light';
 
 }
 
