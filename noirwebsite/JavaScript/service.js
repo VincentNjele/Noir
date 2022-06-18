@@ -95,7 +95,7 @@ window.onscroll = function () {
         getUl.style.backgroundColor = '#000000';
     } else {
         nav.style.backgroundColor = 'transparent';
-        getUl.style.backgroundColor = '#2c3e50';
+        getUl.style.backgroundColor = 'transparent';
         nav.style.boxShadow = 'none';
     }
 }
