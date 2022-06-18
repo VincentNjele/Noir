@@ -77,11 +77,23 @@ displayValue();
 
 // moveImage();
 
-$(window).scroll(function () {
-    var scrollTop = $('html,body').scrollTop();
-    console.log(scrollTop)
-    $('.container').css({ 'background-positionY': + (-scrollTop / 10) + 'px' });
-});
+// $(window).scroll(function () {
+//     var scrollTop = $('html,body').scrollTop();
+//     console.log(scrollTop)
+//     $('.container').css({ 'background-positionY': + (-scrollTop / 2) + 'px' });
+// });
+
+function moveBackgroundImage() {
+
+    var parallax = document.querySelector('.container');
+
+    window.addEventListener('scroll', function(){
+
+        var offSet = window.pageYOffset;
+        parallax.style.backgroundPositionY = -(offSet * 0.1) + 'px';
+    })
+}
+moveBackgroundImage();
 
 window.onscroll = function () {
     var getUl = document.getElementById('getUl');
@@ -250,3 +262,18 @@ function loader(){
     })
 }
 loader();
+
+function smoothScroll(){
+
+    document.querySelectorAll("a[href^='#']").forEach(ancor=> {
+      
+        ancor.addEventListener('click',function(e){
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        })
+
+    })
+}
+smoothScroll();
